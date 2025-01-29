@@ -54,52 +54,66 @@ PostgreSQL, y SQLite, permitiendo la creación, lectura, actualización y elimin
 Los bucles for son los más complejos en PHP. Se comportan como sus homólogos en C.
 La sintaxis de un bucle for es:
 
-`for (expr1; expr2; expr3) sentencia`
+``` php
+for (expr1; expr2; expr3) 
+sentencia
+```
 
 >La primera expresión (expr1) es evaluada (ejecutada) una vez incondicionalmente al comienzo del bucle.
 En el comienzo de cada iteración, se evalúa expr2. Si se evalúa como true, el bucle continúa y se ejecutan la/sy sentencia/s anidada/s. Si se evalúa como false, finaliza la ejecución del bucle.
 Al final de cada iteración, se evalúa (ejecuta) expr3.
 
 ### Ejemplo
-` for ($i = 1; $i <= 10; $i++) { 
+``` php
+ for ($i = 1; $i <= 10; $i++) { 
    echo $i;
-}` 
+}
+```
 
 ### 2. **ForEach:** 
 El constructor foreach proporciona un modo sencillo de iterar sobre arrays. foreach funciona sólo sobre arrays y objetos, 
 y emitirá un error al intentar usarlo con una variable de un tipo diferente de datos o una variable no inicializada.
 Existen dos sintaxis:
 
-`1. foreach (expresión_array as $valor)
- sentencias`  
-`2. foreach (expresión_array as $clave => $valor)
-sentencias`
+``` php
+foreach (expresión_array as $valor)
+ sentencias  
+ 
+foreach (expresión_array as $clave => $valor)
+sentencias
+```
 
 >La primera forma recorre el array dado por expresión_array. En cada iteración, el valor del elemento actual se asigna a $valor y el puntero interno del array avanza una posición (así en la próxima iteración se estará observando el siguiente elemento).
 
 >La segunda forma además asigna la clave del elemento actual a la variable $clave en cada iteración.
 
 ### Ejemplo
-`$a = array(1, 2, 3, 17);
+``` php
+$a = array(1, 2, 3, 17);
 foreach ($a as $v) {
 echo "Valor actual de \$a: $v.\n";
-}`
+}
+```
 
 ### 3. If
 El constructor if es una de las características más importantes de muchos lenguajes, incluido PHP. 
 Permite la ejecución condicional de fragmentos de código. PHP dispone de una estructura if que es similar a la de C:
 
-`if (expr)
-sentencia`
+``` php
+if (expr)
+sentencia
+```
 
 >Como se describe en la sección sobre expresiones, la expresión es evaluada a su valor booleano. 
 Si la expresión se evalúa como true, PHP ejecutará la sentencia y si se evalúa como false la ignorará. 
 Más información sobre qué valores evalúan como false se puede encontrar en la sección 'Convirtiendo a booleano'.
 
 ### Ejemplo 
-`` <?php
+``` php
+<?php
 if ($a > $b) {
   echo "a es mayor que b";
 }
-?>`` 
+?>
+```
 
